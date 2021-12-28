@@ -105,3 +105,10 @@
 --     (5, 1),
 --     (5, 2),
 --     (5, 3);
+
+-- Top/Fetch
+-- select top 4 * from alunos order by id;
+-- select top 10 percent * from alunos order by id;
+-- select * from alunos order by id
+-- offset 2 rows
+-- fetch first 2 rows only
