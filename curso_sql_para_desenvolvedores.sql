@@ -132,20 +132,29 @@
 -- select cast(getdate() as time)
 
 -- Criando umam Stored Procedure
-create procedure PesquisarCategoriaPorId(@id int)
-as BEGIN
-    select * from categorias where id = @id
-end
+-- create procedure PesquisarCategoriaPorId(@id int)
+-- as BEGIN
+--     select * from categorias where id = @id
+-- end
 
-exec PesquisarCategoriaPorId 1
+-- exec PesquisarCategoriaPorId 1
 
-create procedure PersistirDadosEmCategorias(@descricao varchar(255))
+-- create procedure PersistirDadosEmCategorias(@descricao varchar(255))
+-- as
+-- begin
+--     insert into categorias(descricao, cadastrado_em) values(@descricao, getdate())
+--     return
+-- end
+
+-- exec PersistirDadosEmCategorias 'Categoria Procedure'
+-- exec PersistirDadosEmCategorias null
+-- select * from categorias
+
+-- Criando uma View
+create view vwCursos
 as
-begin
-    insert into categorias(descricao, cadastrado_em) values(@descricao, getdate())
-    return
-end
+select c.descricao, ca.descricao categoria from cursos c
+inner join categorias ca
+on c.categoria_id = ca.id
 
-exec PersistirDadosEmCategorias 'Categoria Procedure'
-exec PersistirDadosEmCategorias null
-select * from categorias
+select * from vwCursos where descricao = 'EF Core'
