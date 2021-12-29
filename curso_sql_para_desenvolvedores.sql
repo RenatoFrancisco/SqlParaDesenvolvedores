@@ -112,3 +112,21 @@
 -- select * from alunos order by id
 -- offset 2 rows
 -- fetch first 2 rows only
+
+-- Conhecendo as funções
+-- select left(descricao, 4), descricao from categorias
+-- select right(descricao, 4), descricao from categorias
+-- select substring(descricao, 2, 5), descricao from categorias
+-- select 'RENATO ' + ' FRANCISCO' + NULL
+-- select concat('RAFAEL ', 'ALMEIDA ', 'SANTOS')
+-- select concat(descricao, ' teste') from categorias
+-- select isnull(null, 'default')
+-- select isnull(descricao, 'sem descricao') from categorias
+-- select coalesce(null, null, null, 'primeiro', 'segundo')
+-- select 2 * coalesce(null, 1)
+-- select iif(1 > 0, 'maior que zero', 'menor que zero')
+-- select iif(-1 > 0, 'maior que zero', 'menor que zero')
+-- select iif(len(descricao) > 5, 'maior que 5', 'menor que 5'), descricao from categorias
+-- select getdate()
+-- select cast(getdate() as date)
+-- select cast(getdate() as time)
