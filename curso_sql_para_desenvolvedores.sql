@@ -130,3 +130,22 @@
 -- select getdate()
 -- select cast(getdate() as date)
 -- select cast(getdate() as time)
+
+-- Criando umam Stored Procedure
+create procedure PesquisarCategoriaPorId(@id int)
+as BEGIN
+    select * from categorias where id = @id
+end
+
+exec PesquisarCategoriaPorId 1
+
+create procedure PersistirDadosEmCategorias(@descricao varchar(255))
+as
+begin
+    insert into categorias(descricao, cadastrado_em) values(@descricao, getdate())
+    return
+end
+
+exec PersistirDadosEmCategorias 'Categoria Procedure'
+exec PersistirDadosEmCategorias null
+select * from categorias
