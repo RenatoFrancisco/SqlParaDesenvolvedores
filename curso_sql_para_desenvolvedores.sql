@@ -151,10 +151,30 @@
 -- select * from categorias
 
 -- Criando uma View
-create view vwCursos
-as
-select c.descricao, ca.descricao categoria from cursos c
-inner join categorias ca
-on c.categoria_id = ca.id
+-- create view vwCursos
+-- as
+-- select c.descricao, ca.descricao categoria from cursos c
+-- inner join categorias ca
+-- on c.categoria_id = ca.id
 
-select * from vwCursos where descricao = 'EF Core'
+-- select * from vwCursos where descricao = 'EF Core'
+
+-- Criando sequências
+create sequence MinhaSequencia
+AS INT
+START WITH 6
+INCREMENT BY 1
+MINVALUE 6
+MAXVALUE 1000
+NO CYCLE
+
+select next value for MinhaSequencia
+
+create table TabelaTeste
+(
+    id int default next value for MinhaSequencia,
+    descricao varchar(20)
+)
+
+insert into TabelaTeste(descricao) values('teste 02')
+select * from TabelaTeste
