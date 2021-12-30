@@ -160,21 +160,29 @@
 -- select * from vwCursos where descricao = 'EF Core'
 
 -- Criando sequências
-create sequence MinhaSequencia
-AS INT
-START WITH 6
-INCREMENT BY 1
-MINVALUE 6
-MAXVALUE 1000
-NO CYCLE
+-- create sequence MinhaSequencia
+-- AS INT
+-- START WITH 6
+-- INCREMENT BY 1
+-- MINVALUE 6
+-- MAXVALUE 1000
+-- NO CYCLE
 
-select next value for MinhaSequencia
+-- select next value for MinhaSequencia
 
-create table TabelaTeste
-(
-    id int default next value for MinhaSequencia,
-    descricao varchar(20)
-)
+-- create table TabelaTeste
+-- (
+--     id int default next value for MinhaSequencia,
+--     descricao varchar(20)
+-- )
 
-insert into TabelaTeste(descricao) values('teste 02')
-select * from TabelaTeste
+-- insert into TabelaTeste(descricao) values('teste 02')
+-- select * from TabelaTeste
+
+-- Criando um campo novo
+alter table categorias add teste varchar(100) default 'teste'
+select * from categorias
+
+
+
+
