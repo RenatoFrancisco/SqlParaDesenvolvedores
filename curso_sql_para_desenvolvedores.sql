@@ -180,9 +180,12 @@
 -- select * from TabelaTeste
 
 -- Criando um campo novo
-alter table categorias add teste varchar(100) default 'teste'
-select * from categorias
+-- alter table categorias add teste varchar(100) default 'teste'
+-- select * from categorias
 
+-- Removendo coluna de uma tabela
+alter table categorias drop constraint DF__categoria__teste__01142BA1
+alter table categorias drop column teste
 
 
 
