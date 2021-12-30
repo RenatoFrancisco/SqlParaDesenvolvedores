@@ -184,8 +184,11 @@
 -- select * from categorias
 
 -- Removendo coluna de uma tabela
-alter table categorias drop constraint DF__categoria__teste__01142BA1
-alter table categorias drop column teste
+-- alter table categorias drop constraint DF__categoria__teste__01142BA1
+-- alter table categorias drop column teste
 
+-- Renomeando objetos
+-- execute sp_rename 'dbo.categorias.teste', 'observacao', 'COLUMN'
+-- execute sp_rename 'dbo.TabelaTeste', 'TabelaAlterada'
 
 
