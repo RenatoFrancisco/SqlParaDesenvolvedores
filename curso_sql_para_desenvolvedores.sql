@@ -190,6 +190,27 @@
 -- full join categorias ca
 -- on ca.id = (cr.categoria_id + 5)
 
+-- Union/union all
+-- select * from cursos where id = 1
+-- union
+-- select * from cursos where id = 2
+
+-- select descricao from cursos where id = 1
+-- union
+-- select descricao from categorias where id = 2
+-- union
+-- select 'valor dinamico'
+
+-- select descricao from cursos where id = 1
+-- union all
+-- select descricao from categorias where id = 2
+-- union all
+-- select 'valor dinamico'
+-- union all
+-- select 'valor dinamico'
+
+
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
