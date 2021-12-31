@@ -113,6 +113,11 @@
 -- offset 2 rows
 -- fetch first 2 rows only
 
+-- Where
+-- select * from alunos where nome = 'rafael'
+-- select * from alunos where id >= 3
+
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
