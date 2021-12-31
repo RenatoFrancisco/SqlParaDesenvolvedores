@@ -150,6 +150,11 @@
 -- select * from alunos 
 -- where id in(select id from alunos)
 
+-- Between
+-- select * from alunos 
+-- where id between 2 and 4
+
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
