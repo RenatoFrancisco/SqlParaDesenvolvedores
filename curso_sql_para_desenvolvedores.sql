@@ -137,6 +137,10 @@
 -- select count(*) from cursos
 -- select count(*), sum(total_horas), sum(valor) from cursos
 
+-- Group by
+-- select cidade, estado, count(*) from alunos group by cidade, estado
+
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
