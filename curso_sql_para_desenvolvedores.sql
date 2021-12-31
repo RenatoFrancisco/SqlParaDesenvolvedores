@@ -140,6 +140,11 @@
 -- Group by
 -- select cidade, estado, count(*) from alunos group by cidade, estado
 
+-- Having
+-- select cidade, estado, count(*) total 
+-- from alunos 
+-- group by cidade, estado
+-- having count(*) > 1
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
