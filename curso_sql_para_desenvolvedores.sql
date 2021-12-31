@@ -128,6 +128,11 @@
 -- select * from alunos where nome like '%a%'
 -- select * from alunos where nome like 'r%l'
 
+-- Max/min
+-- select max(id) from alunos
+-- select min(id) from alunos
+-- select * from alunos where id = (select max(id) from alunos)
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
