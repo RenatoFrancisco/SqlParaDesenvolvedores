@@ -146,6 +146,10 @@
 -- group by cidade, estado
 -- having count(*) > 1
 
+--In
+-- select * from alunos 
+-- where id in(select id from alunos)
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
