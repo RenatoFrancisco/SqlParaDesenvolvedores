@@ -184,6 +184,11 @@
 -- right join categorias ca
 -- on ca.id = cr.categoria_id
 
+-- Full Join
+-- select cr.descricao curso, ca.descricao categoria 
+-- from cursos cr 
+-- full join categorias ca
+-- on ca.id = (cr.categoria_id + 5)
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
