@@ -133,6 +133,10 @@
 -- select min(id) from alunos
 -- select * from alunos where id = (select max(id) from alunos)
 
+-- Count/sum
+-- select count(*) from cursos
+-- select count(*), sum(total_horas), sum(valor) from cursos
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
