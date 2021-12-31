@@ -155,6 +155,22 @@
 -- where id between 2 and 4
 
 
+-- Inner join
+select * from categorias
+select * from cursos
+
+select * 
+from cursos cr 
+inner join categorias ca
+on ca.id = cr.categoria_id
+
+select cr.descricao curso, ca.descricao categoria 
+from cursos cr 
+inner join categorias ca
+on ca.id = cr.categoria_id
+
+
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
