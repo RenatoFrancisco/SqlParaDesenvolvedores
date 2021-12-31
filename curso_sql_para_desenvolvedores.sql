@@ -156,19 +156,27 @@
 
 
 -- Inner join
-select * from categorias
-select * from cursos
+-- select * from categorias
+-- select * from cursos
 
-select * 
-from cursos cr 
-inner join categorias ca
-on ca.id = cr.categoria_id
+-- select * 
+-- from cursos cr 
+-- inner join categorias ca
+-- on ca.id = cr.categoria_id
 
-select cr.descricao curso, ca.descricao categoria 
-from cursos cr 
-inner join categorias ca
-on ca.id = cr.categoria_id
+-- select cr.descricao curso, ca.descricao categoria 
+-- from cursos cr 
+-- inner join categorias ca
+-- on ca.id = cr.categoria_id
 
+-- Left join
+-- insert into categorias(descricao) values('categoria test')
+-- select * from categorias
+
+-- select ca.descricao categoria, cr.descricao curso 
+-- from categorias ca
+-- left join cursos cr 
+-- on ca.id = cr.categoria_id
 
 
 -- Conhecendo as funções
