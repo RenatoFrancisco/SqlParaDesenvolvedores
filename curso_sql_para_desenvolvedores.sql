@@ -117,6 +117,9 @@
 -- select * from alunos where nome = 'rafael'
 -- select * from alunos where id >= 3
 
+-- And/or
+select * from alunos where id >= 3 and nome = 'bruno'
+select * from alunos where id >= 3 and (nome = 'bruno' or nome = 'heloisa')
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
