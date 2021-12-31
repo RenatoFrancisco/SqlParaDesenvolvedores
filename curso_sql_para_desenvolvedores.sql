@@ -118,8 +118,15 @@
 -- select * from alunos where id >= 3
 
 -- And/or
-select * from alunos where id >= 3 and nome = 'bruno'
-select * from alunos where id >= 3 and (nome = 'bruno' or nome = 'heloisa')
+-- select * from alunos where id >= 3 and nome = 'bruno'
+-- select * from alunos where id >= 3 and (nome = 'bruno' or nome = 'heloisa')
+
+-- Like
+-- select * from alunos where nome like 'ra%'
+-- select * from alunos where nome like '%o'
+-- select * from alunos where nome like '%a'
+-- select * from alunos where nome like '%a%'
+-- select * from alunos where nome like 'r%l'
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
