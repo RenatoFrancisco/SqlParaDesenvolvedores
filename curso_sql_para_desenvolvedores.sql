@@ -210,14 +210,27 @@
 -- select 'valor dinamico'
 
 -- Criando uma trasação
-select * from categorias
-begin transaction
-update categorias set descricao = upper(descricao) where id > 0
+-- select * from categorias
+-- begin transaction
+-- update categorias set descricao = upper(descricao) where id > 0
+-- GO
+-- delete categorias where id = 4
+-- go
+-- --ROLLBACK
+-- COMMIT
+
+-- Save Point
+begin TRANSACTION
+insert into Categorias (descricao, cadastrado_em) values ('categoria nova 1', getdate())
+insert into Categorias (descricao, cadastrado_em) values ('categoria nova 2', getdate())
 GO
-delete categorias where id = 4
-go
---ROLLBACK
+
+save TRANSACTION AtualizacaPoint
+update categorias set descricao = 'aplicacao web' where descricao = 'web'
+
+rollback transaction AtualizacaPoint
 COMMIT
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
