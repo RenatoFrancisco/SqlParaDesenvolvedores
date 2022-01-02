@@ -209,8 +209,15 @@
 -- union all
 -- select 'valor dinamico'
 
-
-
+-- Criando uma trasação
+select * from categorias
+begin transaction
+update categorias set descricao = upper(descricao) where id > 0
+GO
+delete categorias where id = 4
+go
+--ROLLBACK
+COMMIT
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
