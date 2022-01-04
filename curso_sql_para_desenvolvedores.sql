@@ -242,6 +242,12 @@
 -- with differential,
 --     name = 'Backup do banco de dados - Diferencial'
 
+-- Restaurando backup
+use master -- não pode estar no banco a ser restaurado
+RESTORE DATABASE DesenvolvedorIO
+FROM DISK = 'C:\Users\renat\OneDrive\Área de Trabalho\Cursos\DesenvolvedorIO\AulaBackup-01.bak'
+WITH REPLACE
+
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
 -- select right(descricao, 4), descricao from categorias
