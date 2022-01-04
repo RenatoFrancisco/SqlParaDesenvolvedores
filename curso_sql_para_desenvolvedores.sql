@@ -220,16 +220,27 @@
 -- COMMIT
 
 -- Save Point
-begin TRANSACTION
-insert into Categorias (descricao, cadastrado_em) values ('categoria nova 1', getdate())
-insert into Categorias (descricao, cadastrado_em) values ('categoria nova 2', getdate())
-GO
+-- begin TRANSACTION
+-- insert into Categorias (descricao, cadastrado_em) values ('categoria nova 1', getdate())
+-- insert into Categorias (descricao, cadastrado_em) values ('categoria nova 2', getdate())
+-- GO
 
-save TRANSACTION AtualizacaPoint
-update categorias set descricao = 'aplicacao web' where descricao = 'web'
+-- save TRANSACTION AtualizacaPoint
+-- update categorias set descricao = 'aplicacao web' where descricao = 'web'
 
-rollback transaction AtualizacaPoint
-COMMIT
+-- rollback transaction AtualizacaPoint
+-- COMMIT
+
+-- Gerando backup
+-- BACKUP database DesenvolvedorIO
+-- to disk = 'C:\Users\renat\OneDrive\Área de Trabalho\Cursos\DesenvolvedorIO\AulaBackup.bak'
+-- with init,
+--     name = 'Backup do banco de dados'
+
+-- BACKUP database DesenvolvedorIO
+-- to disk = 'C:\Users\renat\OneDrive\Área de Trabalho\Cursos\DesenvolvedorIO\AulaBackup-01.bak'
+-- with differential,
+--     name = 'Backup do banco de dados - Diferencial'
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
