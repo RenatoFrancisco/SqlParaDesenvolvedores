@@ -243,10 +243,15 @@
 --     name = 'Backup do banco de dados - Diferencial'
 
 -- Restaurando backup
-use master -- não pode estar no banco a ser restaurado
-RESTORE DATABASE DesenvolvedorIO
-FROM DISK = 'C:\Users\renat\OneDrive\Área de Trabalho\Cursos\DesenvolvedorIO\AulaBackup-01.bak'
-WITH REPLACE
+-- use master -- não pode estar no banco a ser restaurado
+-- RESTORE DATABASE DesenvolvedorIO
+-- FROM DISK = 'C:\Users\renat\OneDrive\Área de Trabalho\Cursos\DesenvolvedorIO\AulaBackup-01.bak'
+-- WITH REPLACE
+
+-- Hint NolLOCK
+BEGIN TRANSACTION
+update Categorias set descricao = 'Teste com NOLOCK' where id = 8
+select * from categorias
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
