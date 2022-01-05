@@ -249,9 +249,10 @@
 -- WITH REPLACE
 
 -- Hint NolLOCK
-BEGIN TRANSACTION
-update Categorias set descricao = 'Teste com NOLOCK' where id = 8
-select * from categorias
+--BEGIN TRANSACTION
+--update Categorias set descricao = 'Teste com NOLOCK' where id = 8
+
+--select * from categorias with (nolock)
 
 -- Conhecendo as funções
 -- select left(descricao, 4), descricao from categorias
